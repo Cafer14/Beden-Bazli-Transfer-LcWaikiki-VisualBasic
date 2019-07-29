@@ -1,0 +1,111 @@
+Private Sub CommandButton1_Click()
+Dim a, b, c, e, f, g, h, k, l, m, n, o, ö As Variant
+a = 2
+b = 2
+c = 2
+e = 2
+f = 2
+g = 2
+h = 2
+k = 2
+l = 2
+m = 2
+n = 2
+o = 2
+ö = 2
+Sayfa4.Range("AA1") = "Beden"
+Sayfa4.Range("AB1") = "Boy"
+Do While (Sayfa2.Cells(a, 1) > 0)
+    If ((Sayfa2.Cells(b, 20) * 1) = (Sayfa3.Cells(c, 12) * 1)) Then
+        Cells(e, 1) = Sayfa2.Cells(b, 1)
+        Cells(e, 2) = Sayfa2.Cells(b, 5)
+        Cells(e, 3) = Sayfa2.Cells(b, 9)
+        Cells(e, 4) = Sayfa2.Cells(b, 11)
+        Cells(e, 5) = Sayfa2.Cells(b, 12)
+        Cells(e, 6) = Sayfa2.Cells(b, 14)
+        Cells(e, 7) = Sayfa2.Cells(b, 20)
+        Cells(e, 8) = Sayfa2.Cells(b, 16)
+        Cells(e, 9) = Sayfa3.Cells(c, 13)
+        Cells(e, 10) = Sayfa3.Cells(c, 14)
+        Cells(e, 11) = Sayfa3.Cells(c, 15)
+        Cells(e, 12) = Sayfa3.Cells(c, 17)
+        Cells(e, 13) = Sayfa3.Cells(c, 18)
+        Cells(e, 14) = Sayfa2.Cells(b, 28)
+        Cells(e, 15) = Sayfa2.Cells(b, 28)
+        Cells(e, 16) = Sayfa3.Cells(c, 20)
+        a = a + 1
+        b = b + 1
+        c = 2
+        e = e + 1
+    ElseIf (Sayfa3.Cells(c + 1, 12) > 0) Then
+        c = c + 1
+    Else
+        c = 2
+        b = b + 1
+        a = a + 1
+    End If
+Loop
+Do While (Sayfa4.Cells(k, 1) > 0)
+    If ((Sayfa4.Cells(l, 11) * 1) = (Sayfa3.Cells(m, 12) * 1)) Then
+        Sayfa4.Cells(n, 27) = Sayfa3.Cells(m, 14)
+        Sayfa4.Cells(n, 28) = Sayfa3.Cells(m, 15)
+        Sayfa4.Cells(n, 15) = Sayfa3.Cells(m, 13)
+        k = k + 1
+        l = l + 1
+        n = n + 1
+        m = 2
+    ElseIf (Sayfa3.Cells(m + 1, 12) > 0) Then
+        m = m + 1
+    Else
+        m = 2
+        k = k + 1
+        l = l + 1
+        n = n + 1
+    End If
+Loop
+
+Do While (Cells(f, 1) > 0)
+    If ((Left(Cells(g, 6), 6) = Left(Sayfa4.Cells(h, 14), 6)) And (Left(Cells(g, 2), 4) = (Left(Sayfa4.Cells(h, 2), 4))) And Cells(g, 14) > 0 And Cells(g, 9) = Sayfa4.Cells(h, 15) And Cells(g, 10) = Sayfa4.Cells(h, 27) And Cells(g, 11) = Sayfa4.Cells(h, 28)) Then
+            Cells(g, 15) = Cells(g, 15) - Sayfa4.Cells(h, 17)
+        If (Sayfa4.Cells(o, 2) = Sayfa4.Cells(ö, 2)) Then
+            h = h + 1
+        Else
+            h = 2
+            f = f + 1
+            g = g + 1
+        End If
+    ElseIf (Sayfa3.Cells(h + 1, 11) > 0) Then
+        h = h + 1
+    Else
+        h = 2
+        f = f + 1
+        g = g + 1
+    End If
+Loop
+
+MsgBox ("İşlem Tamamlandı")
+End Sub
+
+
+Private Sub CommandButton3_Click()
+Cells.ClearContents
+Cells.ClearFormats
+Range("A1") = "Gönderen"
+Range("B1") = "AlıcıMağaza"
+Range("C1") = "MerchGrup"
+Range("D1") = "MerchAltGrup"
+Range("E1") = "BuyerGrup"
+Range("F1") = "ÖzelKod"
+Range("G1") = "Barkod"
+Range("H1") = "ÜrünAdı"
+Range("I1") = "Renk"
+Range("J1") = "Beden"
+Range("K1") = "Boy"
+Range("L1") = "Depo"
+Range("M1") = "Reyon"
+Range("N1") = "İstenenMiktar"
+Range("O1") = "KalanMiktar"
+Range("P1") = "AdreslemeLokasyon"
+
+MsgBox ("İşlem Tamamlandı")
+End Sub
